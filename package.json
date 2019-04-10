@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/SDesai71/final-exam/issues"
   },
-  "homepage": "https://github.com/SDesai71/final-exam#readme"
+  "homepage": "https://github.com/SDesai71/final-exam#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.3"
+  }
 }
