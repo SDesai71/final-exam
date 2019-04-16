@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/SDesai71/final-exam#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "hbs": "^4.0.3"
+    "hbs": "^4.0.4"
   }
 }
