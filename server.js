@@ -23,7 +23,10 @@ app.use(bodyParser.json());
 app.post('/', function(request, response){
     console.log(request.body.Username);
     console.log(request.body.Password);
-    //response.redirect("/api",request)
+    var country = request.body.Username
+    response.render('results.hbs',{
+    	result: request.body.Username
+    })
 });
 
 app.listen(port,() =>{
