@@ -14,16 +14,31 @@ app.get('/',(request,response)=>{
 });
 
 // Parse URL-encoded bodies (as sent by HTML forms)
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Parse JSON bodies (as sent by API clients)
 app.use(bodyParser.json());
 
 // Access the parse results as request.body
 app.post('/', function(request, response){
-    console.log(request.body.Username);
+    /*console.log(request.body.Username);
     console.log(request.body.Password);
-    //response.redirect("/api",request)
+    response.render('index');
+    response.redirect("/api",request)*/
+    let city = request.body.Password;
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
+request(url, function (err, response, body) {
+    if(err){
+      res.render('index', {weather: null, error: 'Error, please try again'});
+    } else {
+      let weather = JSON.parse(body)
+      if(weather.main == undefined){
+        res.render('index', {weather: null, error: 'Error, please try again'});
+      } else {
+        let weatherText = `It's ${weather.main.temp} degrees in ${weather.name}!`;
+        res.render('index', {weather: weatherText, error: null});
+      }
+    }
 });
 
 app.listen(port,() =>{
