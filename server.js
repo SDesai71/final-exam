@@ -41,12 +41,22 @@ app.post('/', function (req, res) {
         let image3 = images.collection.items[2].links[0].href;
         let image4 = images.collection.items[3].links[0].href;
         let image5 = images.collection.items[4].links[0].href
+        let image6 = images.collection.items[5].links[0].href
+        let image7 = images.collection.items[6].links[0].href
+        let image8 = images.collection.items[7].links[0].href
+        let image9 = images.collection.items[8].links[0].href
+        let image10 = images.collection.items[9].links[0].href
         res.render('results.hbs',{ 
         	imagess: image,
         	imagess2:image2,
         	imagess3:image3,
         	imagess4:image4,
         	imagess5:image5,
+        	imagess6:image6,
+        	imagess7:image7,
+        	imagess8:image8,
+        	imagess9:image9,
+        	imagess10:image10,
 			error: null});
       }
     }
