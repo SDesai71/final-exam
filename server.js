@@ -4,6 +4,8 @@ var app = express();
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 8080;
 
+const apiKey = 'AIzaSyD6Y8H5e9w-hTom55YjelzdNIL_H1oQO0g'
+
 app.set('view engine','hbs');
 app.use(express.static(__dirname+'/views'));
 
