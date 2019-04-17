@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 app.post('/', function(request, response){
     console.log(request.body.Username);
     console.log(request.body.Password);
+    //response.redirect("/api",request)
 });
 
 app.listen(port,() =>{
