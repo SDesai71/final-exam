@@ -58,16 +58,6 @@ input[type="submit"]:active {
   opacity: 0.2;
   width: 245px;
 }
-.shadow2 {
-  background: #000;
-  border-radius: 12px 12px 4px 4px;
-  box-shadow: 0 0 20px 8px #000;
-  height: 12px;
-  margin: 0px auto;
-  opacity: 0.2;
-  width: 245px;
-}
-
 body{
 	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/confectionary.png);
 }
